@@ -1,0 +1,26 @@
+data:
+  image_dir: "data/images/"
+  mask_dir: "data/masks/"
+  image_size: [256, 256]
+  val_split: 0.2
+  batch_size: 8
+
+model:
+  architecture: "unet"
+  encoder_filters: [64, 128, 256, 512]
+  bottleneck_filters: 1024
+  dropout: 0.3
+
+training:
+  epochs: 100
+  learning_rate: 0.0001
+  loss: "dice_bce"
+  early_stopping_patience: 10
+  reduce_lr_patience: 5
+
+augmentation:
+  horizontal_flip: true
+  vertical_flip: true
+  rotation_limit: 15
+  brightness_limit: 0.2
+  elastic_transform: true

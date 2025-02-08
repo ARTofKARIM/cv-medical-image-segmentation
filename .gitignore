@@ -1,0 +1,11 @@
+__pycache__/
+*.pyc
+.env
+data/
+models/*.h5
+models/*.keras
+logs/
+*.nii
+*.nii.gz
+venv/
+results/
